@@ -1,0 +1,21 @@
+.encurtar-link-bttn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  width: 40%;
+  align-self: center;
+  border-radius: 0.3rem;
+  background-color: var(--color-accent);
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  font-family: var(--main-font);
+  color: var(--color-text-primary);
+  transition: background 0.2s, transform 0.2s
+}
+
+.encurtar-link-bttn:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,24 @@
+.input-encurtar-link {
+  font-family: var(--main-font);
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  background-color: var(--color-bg-tertiary);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.6);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 0.2rem;
+}
+
+.input-encurtar-link::placeholder {
+  font-family: var(--main-font);
+  border: none;
+  outline: none;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  opacity: 20%;
+}
+
+.input-encurtar-link:focus {
+  outline: none;
+  box-shadow: 0 0 2px rgba(124, 58, 237, 0.6);
+}
