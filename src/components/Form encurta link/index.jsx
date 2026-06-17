@@ -6,20 +6,25 @@ import "./form-encurta-link-style.css";
 import { LinkCurto } from "../linkCurto";
 
 export function EncurtaLinkModal() {
-  //Colocar no Form action e criar objeto com formData para capturar esses dados
-
   const [linkCurto, setLinkCurto] = useState("");
 
-  function aoSubmeter(formData) {
+  async function aoSubmeter(formData) {
     const url = formData.get("urlGrande");
 
     if (!url) return;
 
-    const codigoFalso = Math.random().toString(36).substring(2, 8);
-    const resultado = `http://localhost:3000/${codigoFalso}`;
-
-    setLinkCurto(resultado);
-    console.log(resultado);
+    try {
+      const resposta = await fetch("https://encurtador-de-link-backend.onrender.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url }),
+    });
+    
+    const dados = await resposta.json();
+    setLinkCurto(dados.linkCurto)
+    } catch (erro) {
+      console.error("Erro ao conectar com o servidor:", erro);
+    }
   }
 
   return (
