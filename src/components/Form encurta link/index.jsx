@@ -14,7 +14,7 @@ export function EncurtaLinkModal() {
     if (!url) return;
 
     try {
-      const resposta = await fetch("https://encurtador-de-link-backend.onrender.com/encurtar", {
+      const resposta = await fetch("https://smartlnk.onrender.com/encurtar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url }),
