@@ -10,7 +10,20 @@
 }
 
 .urlCurta {
+    margin: 0 auto;
     color: var(--color-text-primary);
     font-size: 1.1rem;
     font-family: var(--main-font);
+    text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    .containerLink {
+        font-size: 0.9rem;
+    }
+
+    .urlCurta {
+        font-size: 0.8rem;
+    }
 }
